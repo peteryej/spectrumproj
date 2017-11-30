@@ -1,0 +1,16 @@
+0.dat 10 BPSK
+1.dat 10 BPSK
+2.dat 10 QPSK
+3.dat 10 QPSK
+4.dat 10 8PSK
+5.dat 10 8PSK
+6.dat 10 PAM4
+7.dat 10 PAM4
+8.dat 10 QAM16
+9.dat 10 QAM16
+10.dat 10 QAM64
+11.dat 10 QAM64
+12.dat 10 GFSK
+13.dat 10 GFSK
+14.dat 10 CPFSK
+15.dat 10 CPFSK
