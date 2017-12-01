@@ -71,7 +71,7 @@ def yolo_net_out_to_boxes(net_out, class_num=0, threshold = 0.2):
     conf_size = SS * B # confidences for each grid cell
 
 
-    reshape_out = np.swapaxes(np.reshape(net_out, (7,7,21), order = 'F'), 0,1)
+    reshape_out = np.swapaxes(np.reshape(net_out, (7,7,10+C), order = 'F'), 0,1)
 
     confs = np.stack((reshape_out[:,:,4], reshape_out[:,:,9]), axis=2)
     probs = reshape_out[:,:,B*5 : ]

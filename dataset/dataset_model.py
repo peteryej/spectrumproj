@@ -22,9 +22,9 @@ class threadsafe_iter:
     def __iter__(self):
         return self
 
-    def __next__(self):
+    def next(self):
         with self.lock:
-            return self.it.__next__()
+            return self.it.next()
 
 def threadsafe_generator(f):
     """A decorator that takes a generator function and makes it thread-safe.
@@ -131,7 +131,7 @@ class dataset_model:
 
         return self.normalize_data(matrix_data), truth
 
-    #@threadsafe_generator
+    @threadsafe_generator
     def dataset_generator(self, batch_size):
         start_index = 0
         end_index = 0
