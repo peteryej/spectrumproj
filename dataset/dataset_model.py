@@ -163,7 +163,7 @@ class dataset_model:
             batch_labels_onehot = self.to_onehot(batch_labels)
             #print batch_labels
             yield (batch_data, batch_labels_onehot)
-
+    @threadsafe_generator
     def dataset_generator_localized(self, batch_size):
         start_index = 0
         end_index = 0
